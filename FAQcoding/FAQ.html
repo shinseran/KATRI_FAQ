@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link type="text/css" rel="stylesheet" href="FAQ.css">
+
+</head>
+<body>
+<div class="content" id="content">
+    <h2>FAQ</h2>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var accoNum=1; // 펼쳐있는값
+            $("#accoDiv>li").each(function(q){
+                $(this).find(".pBox").click(function(){
+                    if(q != accoNum){//인덱스와 accNum이 다르면 살행
+                        
+                        $("#accoDiv>li").eq(accoNum).removeClass("on");
+                        $("#accoDiv>li").eq(accoNum).find(".pBox").next().stop(true,true).slideUp(300);
+                        $("#accoDiv>li").eq(accoNum).find(".pBox").find(".qNum").find("img").attr("src",$("#accoDiv>li").eq(accoNum).find(".pBox").find(".qNum").find("img").attr("src").replace("_on.gif",".gif"));
+                        $("#accoDiv>li").eq(accoNum).find(".pBox").find(".qBtn").find("img").attr("src",$("#accoDiv>li").eq(accoNum).find(".pBox").find(".qBtn").find("img").attr("src").replace("_on.gif",".gif"));
+                        console.log(q);
+                        console.log(accoNum);
+                        accoNum =q;
+
+                        $(this).parent().addClass("on");
+                        $(this).next().stop(true,true).slideDown(300);
+                        $(this).find(".qNum").find("img").attr("src",$(this).find(".qNum").find("img").attr("src").replace(".gif","_on.gif"));
+                        $(this).find(".qBtn").find("img").attr("src",$(this).find(".qBtn").find("img").attr("src").replace(".gif","_on.gif"));
+                    }
+                    else{ //q와 accNum이 같은 행을 눌렀을때
+                        $("#accoDiv>li").eq(accoNum).removeClass("on");
+                        $("#accoDiv>li").eq(accoNum).find(".pBox").next().stop(true,true).slideUp(300);
+                        $("#accoDiv>li").eq(accoNum).find(".pBox").find(".qNum").find("img").attr("src",$("#accoDiv>li").eq(accoNum).find(".pBox").find(".qNum").find("img").attr("src").replace("_on.gif",".gif"));
+                        $("#accoDiv>li").eq(accoNum).find(".pBox").find(".qBtn").find("img").attr("src",$("#accoDiv>li").eq(accoNum).find(".pBox").find(".qBtn").find("img").attr("src").replace("_on.gif",".gif"));
+                        
+                        accoNum=-1;
+
+                    }
+                    
+                })
+            })
+        })
+    </script>
+
+    <div class="faqDiv">
+        <ul id="accoDiv">
+            <li>
+                <div class="pBox">
+                    <p class="qNum">
+                        <img src="icon_q.gif" alt="Q">
+                    </p>
+                    <p class="qTxt">
+                        <a href="javascript:">결제 진행이 원할하지 않은 경우</a>
+                    </p>
+                    <p class="qBtn">
+                        <img src="icon_plus.gif" alt="닫힘">
+                    </p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>
+                        <span style="font-size: 10pt;">
+                        <b>인터넷 익스플로러 사용 시</b>
+                        </span>
+                    </p>
+                    <p>
+                        <span style="font-size: 10pt;">1. 우측 상단의 설정(톱니바퀴) 클릭</span>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="pBox">
+                    <p class="qNum">
+                        <img src="icon_q.gif" alt="Q">
+                    </p>
+                    <p class="qTxt">
+                        <a href="javascript:">온라인 신청시 승인확인 메세지가 뜨는 경우</a>
+                    </p>
+                    <p class="qBtn">
+                        <img src="icon_plus.gif" alt="닫힘">
+                    </p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>
+                        <span style="font-size: 10pt;">
+                        <b>인터넷 익스플로러 사용 시</b>
+                        </span>
+                    </p>
+                    <p>
+                        <span style="font-size: 10pt;">1. 우측 상단의 설정(톱니바퀴) 클릭</span>
+                    </p>
+                </div>
+            </li>
+            <li >
+                <div class="pBox">
+                    <p class="qNum">
+                        <img src="icon_q.gif" alt="Q">
+                    </p>
+                    <p class="qTxt">
+                        <a href="javascript:">로그인이 안됩니다.</a>
+                    </p>
+                    <p class="qBtn">
+                        <img src="icon_plus.gif" alt="닫힘">
+                    </p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>
+                        <span style="font-size: 10pt;">
+                        <b>인터넷 익스플로러 사용 시</b>
+                        </span>
+                    </p>
+                    <p>
+                        <span style="font-size: 10pt;">1. 우측 상단의 설정(톱니바퀴) 클릭</span>
+                    </p>
+                </div>
+            </li>
+            <li >
+                <div class="pBox">
+                    <p class="qNum">
+                        <img src="icon_q.gif" alt="Q">
+                    </p>
+                    <p class="qTxt">
+                        <a href="javascript:">로그인이 안됩니다.</a>
+                    </p>
+                    <p class="qBtn">
+                        <img src="icon_plus.gif" alt="닫힘">
+                    </p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>
+                        <span style="font-size: 10pt;">
+                        <b>인터넷 익스플로러 사용 시</b>
+                        </span>
+                    </p>
+                    <p>
+                        <span style="font-size: 10pt;">1. 우측 상단의 설정(톱니바퀴) 클릭</span>
+                    </p>
+                </div>
+            </li>
+            <li >
+                <div class="pBox">
+                    <p class="qNum">
+                        <img src="icon_q.gif" alt="Q">
+                    </p>
+                    <p class="qTxt">
+                        <a href="javascript:">로그인이 안됩니다.</a>
+                    </p>
+                    <p class="qBtn">
+                        <img src="icon_plus.gif" alt="닫힘">
+                    </p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>
+                        <span style="font-size: 10pt;">
+                        <b>인터넷 익스플로러 사용 시</b>
+                        </span>
+                    </p>
+                    <p>
+                        <span style="font-size: 10pt;">1. 우측 상단의 설정(톱니바퀴) 클릭</span>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="pBox">
+                    <p class="qNum">
+                        <img src="icon_q.gif" alt="Q">
+                    </p>
+                    <p class="qTxt">
+                        <a href="javascript:">로그인이 안됩니다.</a>
+                    </p>
+                    <p class="qBtn">
+                        <img src="icon_plus.gif" alt="닫힘">
+                    </p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>
+                        <span style="font-size: 10pt;">
+                        <b>인터넷 익스플로러 사용 시</b>
+                        </span>
+                    </p>
+                    <p>
+                        <span style="font-size: 10pt;">1. 우측 상단의 설정(톱니바퀴) 클릭</span>
+                    </p>
+                </div>
+            </li>
+            <li >
+                <div class="pBox">
+                    <p class="qNum">
+                        <img src="icon_q.gif" alt="Q">
+                    </p>
+                    <p class="qTxt">
+                        <a href="javascript:">로그인이 안됩니다.</a>
+                    </p>
+                    <p class="qBtn">
+                        <img src="icon_plus.gif" alt="닫힘">
+                    </p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>
+                        <span style="font-size: 10pt;">
+                        <b>인터넷 익스플로러 사용 시</b>
+                        </span>
+                    </p>
+                    <p>
+                        <span style="font-size: 10pt;">1. 우측 상단의 설정(톱니바퀴) 클릭</span>
+                    </p>
+                </div>
+            </li>
+            <li >
+                <div class="pBox">
+                    <p class="qNum">
+                        <img src="icon_q.gif" alt="Q">
+                    </p>
+                    <p class="qTxt">
+                        <a href="javascript:">로그인이 안됩니다.</a>
+                    </p>
+                    <p class="qBtn">
+                        <img src="icon_plus.gif" alt="닫힘">
+                    </p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>
+                        <span style="font-size: 10pt;">
+                        <b>인터넷 익스플로러 사용 시</b>
+                        </span>
+                    </p>
+                    <p>
+                        <span style="font-size: 10pt;">1. 우측 상단의 설정(톱니바퀴) 클릭</span>
+                    </p>
+                </div>
+            </li>
+            <li >
+                <div class="pBox">
+                    <p class="qNum">
+                        <img src="icon_q.gif" alt="Q">
+                    </p>
+                    <p class="qTxt">
+                        <a href="javascript:">로그인이 안됩니다.</a>
+                    </p>
+                    <p class="qBtn">
+                        <img src="icon_plus.gif" alt="닫힘">
+                    </p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>
+                        <span style="font-size: 10pt;">
+                        <b>인터넷 익스플로러 사용 시</b>
+                        </span>
+                    </p>
+                    <p>
+                        <span style="font-size: 10pt;">1. 우측 상단의 설정(톱니바퀴) 클릭</span>
+                    </p>
+                </div>
+            </li>
+            <li >
+                <div class="pBox">
+                    <p class="qNum">
+                        <img src="icon_q.gif" alt="Q">
+                    </p>
+                    <p class="qTxt">
+                        <a href="javascript:">로그인이 안됩니다.</a>
+                    </p>
+                    <p class="qBtn">
+                        <img src="icon_plus.gif" alt="닫힘">
+                    </p>
+                </div>
+                <div class="answer" style="display: none;">
+                    <p>
+                        <span style="font-size: 10pt;">
+                        <b>인터넷 익스플로러 사용 시</b>
+                        </span>
+                    </p>
+                    <p>
+                        <span style="font-size: 10pt;">1. 우측 상단의 설정(톱니바퀴) 클릭</span>
+                    </p>
+                </div>
+            </li>        
+        </ul>
+    </div>
+    <div class="paging mt30">
+        <p>
+            <strong>1</strong>
+        </p>
+    </div>
+
+</div>
+</body>
+</html>
